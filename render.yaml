@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pubg-login
+    env: php
+    buildCommand: ""
+    startCommand: php -S 0.0.0.0:8080
+    region: frankfurt # Kendi bölgeni seçebilirsin (örn: oregon, singapore)
+    plan: free
+    disk:
+      name: log-storage
+      mountPath: /opt/render/project/src
+      sizeGB: 1
